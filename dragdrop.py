@@ -17,11 +17,10 @@ driver.get(url)
 #maximize window
 driver.maximize_window()
 time.sleep(3)
-# drag=WebDriverWait(driver, 20).until(EC.element_to_be_clickable(By.XPATH, "//div[@id='image']//img"))
-# drop=WebDriverWait(driver, 20).until(EC.element_to_be_clickable(By.XPATH, "//div[@id='box']"))
 drag = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@id='image']//img")))
 drop = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//div[@id='box']")))
 ActionChains(driver).drag_and_drop(drag, drop).perform()
+#quit window after 3 sec
 time.sleep(3)
 driver.quit()
 
