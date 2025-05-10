@@ -15,7 +15,7 @@ driver.maximize_window()
 #find the button of open
 button1=driver.find_element(By.ID, "modal-button")
 button1.click()
-time.sleep(2)
+time.sleep(5)
 
 #close the modal
 close=driver.find_element(By.ID, "close-button")
